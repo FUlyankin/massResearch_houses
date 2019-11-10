@@ -5,7 +5,7 @@
 __Важные ссылки:__
 
 * [Вопросики, которые нам надо порешать.](https://github.com/FUlyankin/massResearch_houses/issues) Не стесняйтесь врываться в эти трэды и писать там. Если никто не будет это делать, я расстроюсь.
-* [Логи пар]( ) 
+* [Логи пар](https://fulyankin.github.io/massResearch_houses/)
 * Видеозаписи пар
 
 __Идеология massResearch__
