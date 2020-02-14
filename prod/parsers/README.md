@@ -21,6 +21,7 @@
 * немножко первокурсники (когда совсем пьяные)(нет)
 >>>>>>> Stashed changes
 * Filippok <3
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 *Zloy haker tyt
@@ -31,4 +32,6 @@
 >>>>>>> Stashed changes
 
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 005c7cb... я  тут добавил строчку
 --------------
