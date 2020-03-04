@@ -8,7 +8,7 @@ __Важные ссылки:__
 
 - [Вопросики, которые нам надо порешать.](https://github.com/FUlyankin/massResearch_houses/issues) Не стесняйтесь врываться в эти трэды и писать там. Если никто не будет это делать, я расстроюсь.
 - [Логи пар](https://fulyankin.github.io/massResearch_houses/)
-- Канал на youtube  с записями пар
+- [Видео с записями пар](https://www.youtube.com/playlist?list=PLNKXA-74YGLhpm2Z7seXr7xA4x4HicE_7) на youtube
 - [Удобная тулза](https://github.com/marketplace/review-notebook-app) для ревью юпитерских тетрадок
 - [Сервис для скачки](https://minhaskamal.github.io/DownGit/#/home) отдельных папок
 
