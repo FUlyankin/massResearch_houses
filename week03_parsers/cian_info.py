@@ -72,3 +72,8 @@ def to_info(soup):
     for k,v in zip(desc, info):
         text[k.text] = v.text
     return(text)
+
+
+def get_address(soup):
+    address = soup.find_all('address', {'class':'a10a3f92e9--address--140Ec'})[0]
+    return(address.text[:-8])
