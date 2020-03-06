@@ -12,4 +12,24 @@ def get_soup(url):
     return soup
 
 
-
+def get_general_information(soup):
+    '''
+    Скачиваем общую инфу о хате
+    '''
+    info = soup.find_all('ul', {'class':'a10a3f92e9--list--2M4V-'})
+    
+    
+    describe = info[0].find_all('li')
+    
+    dic = collections.defaultdict()
+    
+    
+    for i in range(len(describe)):
+        y = describe[i].find_all('span')
+        if len(y) == 2:
+            dic[y[0].text] = y[1].text
+        else:
+            dic[y[0].text] = y[2].text
+    
+    
+    return(dic)
