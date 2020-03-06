@@ -53,6 +53,7 @@ def get_about(soup):
 def get_price(soup):
     price = soup.find_all('span', {'itemprop':'price'})[0]
     return int(re.sub('\D', '', price.text))
+
 def get_description(soup):
     """
         Находит в soup описание дома
@@ -60,3 +61,14 @@ def get_description(soup):
     d = soup.find('p', {'itemprop': 'description'})
                     
     return d.text
+
+def to_info(soup):
+    """
+        Собирает инфу о квадратуре, этажности и дате постройки из супа
+    """
+    text = { }
+    desc = soup.find_all('div', {'class': 'a10a3f92e9--info-title--2bXM9'})
+    info = soup.find_all('div', {'class' : 'a10a3f92e9--info-value--18c8R'})
+    for k,v in zip(desc, info):
+        text[k.text] = v.text
+    return(text)
