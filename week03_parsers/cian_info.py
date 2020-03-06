@@ -29,7 +29,7 @@ def get_general_information(soup):
         if len(y) == 2:
             dic[y[0].text] = y[1].text
         else:
-            dic[y[0].text] = y[2].text
+            dic[y[0].text.split('+')[0]] = y[2].text
     
     
     return(dic)
