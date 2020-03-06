@@ -33,3 +33,17 @@ def get_general_information(soup):
     
     
     return(dic)
+
+
+def get_about(soup):
+    '''
+    Получаем информацию о доме
+    '''
+    all = soup.find('div', {'class':'a10a3f92e9--column--2oGBs'})
+    x = all.find_all('div')
+
+    d = dict()
+
+    for i in range(len(x)//3):
+        d[x[i*3+1].text] = x[i*3+2].text
+    return d
