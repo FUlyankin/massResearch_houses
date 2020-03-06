@@ -47,6 +47,12 @@ def get_about(soup):
     for i in range(len(x)//3):
         d[x[i*3+1].text] = x[i*3+2].text
     return d
+
+
+
+def get_price(soup):
+    price = soup.find_all('span', {'itemprop':'price'})[0]
+    return int(re.sub('\D', '', price.text))
 def get_description(soup):
     """
         Находит в soup описание дома
