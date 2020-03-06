@@ -47,3 +47,10 @@ def get_about(soup):
     for i in range(len(x)//3):
         d[x[i*3+1].text] = x[i*3+2].text
     return d
+def get_description(soup):
+    """
+        Находит в soup описание дома
+    """
+    d = soup.find('p', {'itemprop': 'description'})
+                    
+    return d.text
