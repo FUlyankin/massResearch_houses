@@ -84,3 +84,9 @@ def get_coord(soup):
     a = str(a[0])
     return {"lat": re.findall('"lat":(\d\d\.\d+)',a)[0],
     "long": re.findall('"lng":(\d\d\.\d+)',a)[0]}
+
+
+def get_smth(x):
+    
+    pass
+
