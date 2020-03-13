@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -30,18 +32,21 @@ def get_general_information(soup):
 
 
 def get_about(soup):
-    '''
+    """
     Получаем информацию о доме
-    '''
+    """
     info = soup.find('div', {'class':'a10a3f92e9--column--2oGBs'})
     x = info.find_all('div')
     d = {}
-    for i in range(len(x)//3):
-        d[x[i*3+1].text] = x[i*3+2].text
+    for i in range(len(x) // 3):
+        d[x[i * 3 + 1].text] = x[i * 3 + 2].text
     return d
 
 
 def get_price(soup):
+    """
+    Вытаскивает цену
+    """
     price = soup.find_all('span', {'itemprop':'price'})[0]
     return {"цена": int(re.sub('\D', '', price.text))}
 
@@ -54,7 +59,7 @@ def get_description(soup):
     return {"описание": d.text}
 
 
-def to_info(soup):
+def get_square_info(soup):
     """
     Собирает инфу о квадратуре, этажности и дате постройки из супа
     """
@@ -82,5 +87,8 @@ def get_title(soup):
 def get_coord(soup):
     a = [item for item in soup.find_all('script', {"type": "text/javascript"}) if 'coord' in str(item)]
     a = str(a[0])
-    return {"lat": re.findall('"lat":(\d\d\.\d+)',a)[0],
-    "long": re.findall('"lng":(\d\d\.\d+)',a)[0]}
+    d = {
+        "lat": re.findall('"lat":(\d\d\.\d+)', a)[0],
+        "long": re.findall('"lng":(\d\d\.\d+)', a)[0]
+    }
+    return d
