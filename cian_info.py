@@ -98,3 +98,13 @@ def get_coord(soup):
         "long": re.findall('"lng":(\d\d\.\d+)', a)[0]
     }
     return d
+
+
+def get_reinovation(soup):
+    """
+    Комментарий про реиновацию и тп
+    """
+    if soup.find("blockquote"):
+        return {"комментарий": soup.find("blockquote").text}
+    else:
+        return {"комментарий": None}
