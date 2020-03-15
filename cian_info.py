@@ -21,14 +21,14 @@ def get_general_information(soup):
     info = soup.find_all('ul', {'class': 'a10a3f92e9--list--2M4V-'})
     describe = info[0].find_all('li')
 
-    dic = {}
+    d = {}
     for i in range(len(describe)):
         y = describe[i].find_all('span')
         if len(y) == 2:
-            dic[y[0].text] = y[1].text
+            d[y[0].text] = y[1].text
         else:
-            dic[y[0].text.split('+')[0]] = y[-1].text
-    return(dic)
+            d[y[0].text.split('+')[0]] = y[-1].text
+    return d
 
 
 def get_about(soup):
@@ -36,11 +36,14 @@ def get_about(soup):
     Получаем информацию о доме
     """
     info = soup.find('div', {'class':'a10a3f92e9--column--2oGBs'})
-    x = info.find_all('div')
-    d = {}
-    for i in range(len(x) // 3):
-        d[x[i * 3 + 1].text] = x[i * 3 + 2].text
-    return d
+    if info == None:
+        return {}
+    else:    
+        x = info.find_all('div')
+        d = {}
+        for i in range(len(x) // 3):
+            d[x[i * 3 + 1].text] = x[i * 3 + 2].text
+        return d
 
 
 def get_price(soup):
@@ -72,6 +75,9 @@ def get_square_info(soup):
 
 
 def get_address(soup):
+    """
+    Вытаскивает адрес
+    """
     address = soup.find_all('address', {'class':'a10a3f92e9--address--140Ec'})[0]
     return {"адрес": address.text[:-8]}
 
