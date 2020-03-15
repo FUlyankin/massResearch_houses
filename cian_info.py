@@ -16,8 +16,11 @@ def get_soup(url):
     Качает по ссылке url и номеру страницы p её содержимое, отдаёт в виде bs4
     """    
     resp = requests.get(url)
-    soup = BeautifulSoup(resp.content, 'lxml')
-    return soup
+    if resp.status_code == 404
+        return None
+    else 
+        soup = BeautifulSoup(resp.content, 'lxml')
+        return soup
 
 
 def get_soup_agent(url, agent=UserAgent().chrome):
@@ -168,5 +171,4 @@ def get_reinovation(soup):
         return {"комментарий": soup.find("blockquote").text}
     else:
         return {"комментарий": None}
-    
     
