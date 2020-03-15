@@ -4,6 +4,12 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
+from fake_useragent import UserAgent # библиотека для создания юзерагентов
+
+
+##################################
+# Функции для запросов к серверу 
+##################################
 
 def get_soup(url):
     """
@@ -13,6 +19,60 @@ def get_soup(url):
     soup = BeautifulSoup(resp.content, 'lxml')
     return soup
 
+
+def get_soup_agent(url, agent=UserAgent().chrome):
+    """
+        Качает по ссылке url и номеру страницы p её содержимое, отдаёт в виде bs4
+        Дополнительно на вход принимает юзер агента
+    """     
+    resp = requests.get(url, headers={'User-Agent': agent})
+    soup = BeautifulSoup(resp.content)
+    return soup 
+
+
+def get_soup_retry(url, MAX_RETRIES=10):
+    """
+        Качает по ссылке urlи номеру страницы p её содержимое, отдаёт в виде bs4
+        Пытается избежать Disconection и делает по MAX_RETRIES=10 попыток при проблемах
+    """
+    session = requests.Session()
+    
+    adapter = requests.adapters.HTTPAdapter(max_retries=MAX_RETRIES)
+    session.mount('https://', adapter)
+    session.mount('http://', adapter)
+    
+    resp = session.get(url)
+    soup = BeautifulSoup(resp.content)
+    return soup
+
+
+##################################
+# Вспомогательные мелкие функии
+##################################
+
+def is_capcha_or_badip(soup):
+    """
+        Проверяет вылезла ли капча
+
+        soup: bs4
+            html-страничка, прогнанная через Beautifulsoap
+        return: bool
+            есть ли капча на страничке
+    """
+     
+    if soup.title.text == 'Captcha - база объявлений ЦИАН':
+        print('Капча вылезла :(')
+        return True
+    elif soup.title.text == 'Технические работы':
+        print('Подозрительная сеть :(')
+        return True
+    else:
+        return False
+
+    
+##################################
+# Фунции для сбора информации 
+##################################
 
 def get_general_information(soup):
     """
@@ -108,3 +168,5 @@ def get_reinovation(soup):
         return {"комментарий": soup.find("blockquote").text}
     else:
         return {"комментарий": None}
+    
+    
