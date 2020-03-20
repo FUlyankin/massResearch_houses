@@ -16,9 +16,9 @@ def get_soup(url):
     Качает по ссылке url и номеру страницы p её содержимое, отдаёт в виде bs4
     """    
     resp = requests.get(url)
-    if resp.status_code == 404
+    if resp.status_code == 404:
         return None
-    else 
+    else: 
         soup = BeautifulSoup(resp.content, 'lxml')
         return soup
 
@@ -29,9 +29,9 @@ def get_soup_agent(url, agent=UserAgent().chrome):
         Дополнительно на вход принимает юзер агента
     """     
     resp = requests.get(url, headers={'User-Agent': agent})
-    if resp.status_code == 404
+    if resp.status_code == 404:
         return None
-    else
+    else:
         soup = BeautifulSoup(resp.content)
         return soup 
 
@@ -48,9 +48,9 @@ def get_soup_retry(url, MAX_RETRIES=10):
     session.mount('http://', adapter)
     
     resp = session.get(url)
-    if resp.status_code == 404
+    if resp.status_code == 404:
         return None
-    else
+    else:
         soup = BeautifulSoup(resp.content)
         return soup
 
