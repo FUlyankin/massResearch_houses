@@ -2,9 +2,9 @@
 
 Попробовали w2v на вкус: 
 
-* Видео 1
-* Видео 2
-* Видео 3
+* [Выводим функции потерь: видео 1](https://www.youtube.com/watch?v=OqG0KLbkr40&list=PLNKXA-74YGLhpm2Z7seXr7xA4x4HicE_7&index=8)
+* [Строим на доске w2v: видео 2](https://www.youtube.com/watch?v=HGhimugaVdw&list=PLNKXA-74YGLhpm2Z7seXr7xA4x4HicE_7&index=9)
+* [Оцениваем w2v на компе: видео 3](https://www.youtube.com/watch?v=D-tg8ryRhaA&list=PLNKXA-74YGLhpm2Z7seXr7xA4x4HicE_7&index=10)
 
 
 __Материалы семинара:__
