@@ -2,10 +2,8 @@
 
 Закончили с парсером. Качали основную информации с ЦИАН и закидывали её в репозиторий. Создали ветку prod, которую теперь развиваем.  
 
-* Видео 1
-* Видео 2
-* Видео 3
-
+* [Видео 1](https://www.youtube.com/watch?v=ujvxO2zPEWU&list=PLNKXA-74YGLhpm2Z7seXr7xA4x4HicE_7&index=6)
+* [Видео 2](https://www.youtube.com/watch?v=ojz_uKtZFcg&list=PLNKXA-74YGLhpm2Z7seXr7xA4x4HicE_7&index=7)
 
 __Материалы семинара:__
 
