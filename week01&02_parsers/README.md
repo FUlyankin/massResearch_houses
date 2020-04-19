@@ -5,7 +5,7 @@
 
 __Материалы семинара:__
 
-* Видео с пар: [часть 1](https://www.youtube.com/watch?v=Znf9AhdyaNY&list=PLNKXA-74YGLhpm2Z7seXr7xA4x4HicE_7), [часть 2](https://www.youtube.com/watch?v=0ThQLJ8WHz4&list=PLNKXA-74YGLhpm2Z7seXr7xA4x4HicE_7&index=2), [часть 3](https://www.youtube.com/watch?v=luDhr353zbg&list=PLNKXA-74YGLhpm2Z7seXr7xA4x4HicE_7&index=3)
+* Видео с пар: [часть 1](https://www.youtube.com/watch?v=Znf9AhdyaNY&list=PLNKXA-74YGLhpm2Z7seXr7xA4x4HicE_7), [часть 2](https://www.youtube.com/watch?v=0ThQLJ8WHz4&list=PLNKXA-74YGLhpm2Z7seXr7xA4x4HicE_7&index=2), [часть 3](https://www.youtube.com/watch?v=luDhr353zbg&list=PLNKXA-74YGLhpm2Z7seXr7xA4x4HicE_7&index=3), [часть 4](https://www.youtube.com/watch?v=4WawYsCL1v8&list=PLNKXA-74YGLhpm2Z7seXr7xA4x4HicE_7&index=4), [часть 5](https://www.youtube.com/watch?v=zuzeGlW56UE&list=PLNKXA-74YGLhpm2Z7seXr7xA4x4HicE_7&index=5)
 * [Тетрадка с первого семинара](https://nbviewer.jupyter.org/github/FUlyankin/massResearch_houses/blob/master/week01_parsers/sem01_v1.ipynb)
 * [Доработанная версия](https://nbviewer.jupyter.org/github/FUlyankin/massResearch_houses/blob/master/week01%2602_parsers/sem01_v2.ipynb)
 * [Тетрадка с мелочами и новыми командами/пакетами, которые обсудили на паре](https://nbviewer.jupyter.org/github/FUlyankin/massResearch_houses/blob/master/week01%2602_parsers/dirty_sem02.ipynb)
