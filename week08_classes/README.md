@@ -14,8 +14,8 @@ __В этой же тетрадке лижит домашка!__
 
 __Полезные ссылки:__
 
+* [Класс для комплексного числа](https://github.com/hse-econ-data-science/eds_spring_2020/blob/master/sem04_class/sem_04_182.py)
 * [Видос Демешева про матричные производные](https://www.youtube.com/watch?v=arg10-X8fjU)
-
 * [Мой конспект по матричным производным](https://github.com/FUlyankin/neural_nets_econ/blob/master/2019/sem_3/matrix_diff.pdf)
 * [Конспект про матричные производные, по которому я готовился](http://www.machinelearning.ru/wiki/images/5/50/MOMO17_Seminar2.pdf)
 * [Ещё матричные производные от Жени Соколова](https://github.com/esokolov/ml-course-hse/blob/master/2017-fall/seminars/sem02-linregr-part1.pdf)
